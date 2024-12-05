@@ -9,14 +9,14 @@ function Navbar() {
           </a>
           <a
             href="#how-we-work"
-            className="text-gray-700 hover:text-orange-600"
-          >
+            className="text-gray-700 hover:text-orange-600">
             Bagaimana kami bekerja
           </a>
           <a href="#faq" className="text-gray-700 hover:text-orange-600">
             FAQ
           </a>
-          <a href="#download" className="text-gray-700 hover:text-orange-600">
+          <a
+           href="#download" className="text-gray-700 hover:text-orange-600">
             Download App
           </a>
         </div>
