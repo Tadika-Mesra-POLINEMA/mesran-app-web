@@ -1,27 +1,33 @@
 import React from "react";
-import Image from "next/image";
 
 const Hero = () => {
   return (
     <section
-      className="relative bg-cover bg-center h-screen flex items-center justify-center"
-      style={{ backgroundImage: 'url("/path-to-your-image.jpg")' }}
+      className="relative bg-cover bg-center h-screen"
+      style={{ backgroundImage: 'url("/image1.jpg")' }} // Perbaikan pada sintaks backgroundImage
     >
+      {/* Overlay untuk efek gelap */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="text-center text-white z-10">
+
+      {/* Konten di pojok kiri bawah */}
+      <div className="absolute bottom-10 left-10 text-white z-10">
         <h1 className="text-4xl font-semibold mb-4">
-          Buat semua acara dengan satu Aplikasi.
+          Buat semua acara <br />
+          dengan satu Aplikasi.
         </h1>
         <p className="text-lg mb-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          voluptatibus.
+          Buat semua acara dengan satu aplikasi yang memudahkan <br />
+          Anda mengatur berbagai jenis acara, mulai dari perencanaan <br />
+          hingga undangan, dengan praktis dan efisien.
         </p>
-        <a
+        
+        {/* Tombol atau CTA */}
+        {/* <a
           href="#download"
           className="bg-orange-600 text-white px-6 py-3 rounded-lg"
         >
           Download App
-        </a>
+        </a> */}
       </div>
     </section>
   );
