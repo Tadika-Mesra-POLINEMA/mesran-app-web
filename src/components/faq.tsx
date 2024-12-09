@@ -1,74 +1,96 @@
 function Faq() {
   return (
-    <section id="faq" className="py-16 bg-gray-50">
-      <div className="container mx-auto text-center">
-        <p className="text-lg font-semibold mb-8">FAQ</p>
-        <h2 className="text-3xl font-semibold mb-8">
-          Beberapa pertanyaan yang <br />
-          mungkin buat anda bingung.
-        </h2>
-        <p className="text-lg text-gray-600 mb-8">
-          Beberapa pertanyaan yang sering muncul dan mungkin bisa membantu <br />
-          menjawab kebingungan Anda seputar penggunaan aplikasi ini.
-        </p>
+    <section
+      id="faq"
+      className="md:px-[60px] md:py-[60px] bg-[#FFFFFF] px-5 py-5"
+    >
+      <div className="flex flex-col gap-[60px] items-center">
+        {/* Judul */}
+        <div className="flex flex-col gap-4 items-center">
+          <div className="px-4 py-2 bg-[#FFEDEA] rounded-full font-semibold text-base text-[#FE4F34]">
+            FAQ
+          </div>
+          <p className="text-[40px] text-center leading-[120%] font-medium text-[#1B1B1B]">
+            Beberapa pertanyaan yang <br />
+            mungkin buat anda bingung.
+          </p>
+          <div className="text-base text-center text-[#7F7F7F]">
+            Beberapa pertanyaan yang sering muncul dan mungkin bisa membantu{" "}
+            <br />
+            menjawab kebingungan Anda seputar penggunaan aplikasi ini.
+          </div>
+        </div>
 
-        {/* Grid dengan dua kolom */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="p-6 bg-white shadow-lg rounded-lg text-left">
-            <h3 className="text-xl font-semibold mb-2">Apa itu Mesran?</h3>
-            <p className="text-gray-600">
-            Mesran adalah aplikasi mobile untuk membuat acara eksklusif. Dibekali AI <br />
-            canggih, Mesran memudahkan Anda merencanakan, mengelola, dan <br />
-            mengundang tamu dengan hasil yang berkesan.
+        {/* Container */}
+        <div className="grid grid-cols-2 gap-6 w-full">
+          {/* Card 1 */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-[#FFFFFF] border-[1px] border-[#E8E8E8] rounded-xl px-6 py-6 w-fill">
+            <p className="font-medium text-2xl text-[#1B1B1B]">
+              Apa itu Mesran?
+            </p>
+            <p className="text-base text-[#7F7F7F]">
+              Mesran adalah aplikasi mobile untuk membuat acara eksklusif.
+              Dibekali AI canggih, Mesran memudahkan Anda merencanakan,
+              mengelola, dan mengundang tamu dengan hasil yang berkesan.
             </p>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg text-left">
-            <h3 className="text-xl font-semibold mb-2">
-            Apakah penggunaannya mudah?
-            </h3>
-            <p className="text-gray-600">
-            Tentu! Aplikasi ini dirancang dengan antarmuka yang sederhana, intuitif, dan <br />
-            user-friendly, sehingga mudah digunakan oleh siapa saja, bahkan untuk pemula <br />
-            sekalipun.
+
+          {/* Card 2 */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-[#FFFFFF] border-[1px] border-[#E8E8E8] rounded-xl px-6 py-6 w-fill">
+            <p className="font-medium text-2xl text-[#1B1B1B]">
+              Apakah penggunaannya gampang?
+            </p>
+            <p className="text-base text-[#7F7F7F]">
+              Tentu! Aplikasi ini dirancang dengan antarmuka yang sederhana,
+              intuitif, dan user-friendly, sehingga mudah digunakan oleh siapa
+              saja, bahkan untuk pemula sekalipun.
             </p>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg text-left">
-            <h3 className="text-xl font-semibold mb-2">
-            Apakah aplikasinya aman?
-            </h3>
-            <p className="text-gray-600">
-            Ya, aplikasi kami dirancang dengan keamanan tinggi. Data pengguna dilindungi <br />
-            menggunakan enkripsi canggih, dan kami terus memantau serta memperbarui <br />
-            sistem untuk memastikan keamanan maksimal.
+
+          {/* Card 3 */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-[#FFFFFF] border-[1px] border-[#E8E8E8] rounded-xl px-6 py-6 w-fill">
+            <p className="font-medium text-2xl text-[#1B1B1B]">
+              Apakah aplikasinya aman?
+            </p>
+            <p className="text-base text-[#7F7F7F]">
+              Ya, aplikasi kami dirancang dengan keamanan tinggi. Data pengguna
+              dilindungi menggunakan enkripsi canggih, dan kami terus memantau
+              serta memperbarui sistem untuk memastikan keamanan maksimal.
             </p>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg text-left">
-            <h3 className="text-xl font-semibold mb-2">
-            Apakah acaranya bersifat eksklusif?
-            </h3>
-            <p className="text-gray-600">
-            Ya, acara yang dibuat melalui aplikasi ini bersifat eksklusif. Anda dapat mengatur <br />
-            akses undangan dan memastikan hanya tamu yang diundang yang bisa <br />
-            bergabung.
+
+          {/* Card 4 */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-[#FFFFFF] border-[1px] border-[#E8E8E8] rounded-xl px-6 py-6 w-fill">
+            <p className="font-medium text-2xl text-[#1B1B1B]">
+              Apakah acaranya bersifat eksklusif?
+            </p>
+            <p className="text-base text-[#7F7F7F]">
+              Ya, acara yang dibuat melalui aplikasi ini bersifat eksklusif.
+              Anda dapat mengatur akses undangan dan memastikan hanya tamu yang
+              diundang yang bisa bergabung.
             </p>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg text-left">
-            <h3 className="text-xl font-semibold mb-3">
-            Bisa dipakai acara apa saja?
-            </h3>
-            <p className="text-gray-600">
-            Aplikasi ini bisa digunakan untuk berbagai jenis acara, seperti ulang tahun, <br />
-            pernikahan, reuni, seminar, atau acara eksklusif lainnya. Fleksibel untuk <br />
-            kebutuhan acara besar maupun kecil!
+
+          {/* Card 5 */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-[#FFFFFF] border-[1px] border-[#E8E8E8] rounded-xl px-6 py-6 w-fill">
+            <p className="font-medium text-2xl text-[#1B1B1B]">
+              Bisa dipakai acara apa saja?
+            </p>
+            <p className="text-base text-[#7F7F7F]">
+              Aplikasi ini bisa digunakan untuk berbagai jenis acara, seperti
+              ulang tahun, pernikahan, reuni, seminar, atau acara eksklusif
+              lainnya. Fleksibel untuk kebutuhan acara besar maupun kecil!
             </p>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg text-left">
-            <h3 className="text-xl font-semibold mb-3">
+
+          {/* Card 6 */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-[#FFFFFF] border-[1px] border-[#E8E8E8] rounded-xl px-6 py-6 w-fill">
+            <p className="font-medium text-2xl text-[#1B1B1B]">
               Apakah aplikasi ini mendukung acara dengan banyak tamu?
-            </h3>
-            <p className="text-gray-600">
-            Ya, aplikasi ini mendukung acara dengan banyak tamu. Anda bisa mengundang <br />
-            dan mengelola tamu dengan mudah.
+            </p>
+            <p className="text-base text-[#7F7F7F]">
+              Ya, aplikasi ini mendukung acara dengan banyak tamu. Anda bisa
+              mengundang dan mengelola tamu dengan mudah.
             </p>
           </div>
         </div>
