@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav id="Navbar" className="md:px-12 md:py-6 bg-[#FFFFFF] px-5 py-5">
+    <nav id="Navbar" className="md:px-12 md:py-4 bg-[#FFFFFF] px-5 py-5">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex gap-[6px] items-center">
