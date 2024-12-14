@@ -1,5 +1,6 @@
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  disabled?: boolean;
 }
 
 export function Button({ onClick, className = "", children }: ButtonProps) {
