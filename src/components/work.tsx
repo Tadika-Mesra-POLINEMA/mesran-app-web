@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SectionLabel } from "./section-label";
 
 function HowWeWork() {
@@ -26,9 +27,11 @@ function HowWeWork() {
           {/* Container 1 */}
           <div className="relative overflow-hidden flex flex-col w-full h-[600px] bg-[#F6F6F6] rounded-xl items-center">
             <div className="relative overflow-hidden w-full flex flex-grow">
-              <img
+              <Image
                 src="/images/mockup2.png"
                 alt="Logo"
+                width={1000}
+                height={1000}
                 className="w-10/12 object-contain absolute top-[40px] left-1/2 -translate-x-1/2"
               />
             </div>
@@ -47,9 +50,11 @@ function HowWeWork() {
           {/* Container 2 */}
           <div className="relative overflow-hidden flex flex-col w-full h-[600px] bg-[#F6F6F6] rounded-xl items-center">
             <div className="relative overflow-hidden w-full flex flex-grow">
-              <img
+              <Image
                 src="/images/mockup3.png"
                 alt="Logo"
+                width={1000}
+                height={1000}
                 className="w-10/12 object-contain absolute top-[40px] left-1/2 -translate-x-1/2"
               />
             </div>
@@ -67,9 +72,11 @@ function HowWeWork() {
           {/* Container 3 */}
           <div className="relative overflow-hidden flex flex-col w-full h-[600px] bg-[#F6F6F6] rounded-xl items-center">
             <div className="relative overflow-hidden w-full flex flex-grow">
-              <img
+              <Image
                 src="/images/mockup4.png"
                 alt="Logo"
+                width={1000}
+                height={1000}
                 className="w-10/12 object-contain absolute top-[40px] left-1/2 -translate-x-1/2"
               />
             </div>

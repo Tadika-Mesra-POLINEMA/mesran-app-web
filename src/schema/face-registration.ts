@@ -78,7 +78,7 @@ export const FaceRegisterSchema = z.object({
         try {
           await validateImagesArray(images);
           return true;
-        } catch (error) {
+        } catch {
           return false;
         }
       },
@@ -120,7 +120,7 @@ export const FaceRegisterSingleImageSchema = z.object({
           }
 
           return true;
-        } catch (error) {
+        } catch {
           return false;
         }
       },

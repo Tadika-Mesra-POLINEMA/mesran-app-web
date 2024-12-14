@@ -70,9 +70,11 @@ function Advantage() {
 
           {/* Container 2 */}
           <div className="relative overflow-hidden flex items-end justify-center w-full h-[500px] md:h-full bg-cover bg-center rounded-xl bg-[url('/images/bgCard.jpg')] border-[1px] border-[#E8E8E8]">
-            <img
+            <Image
               src="/images/mockup1.png"
               alt="mockup1"
+              width={1000}
+              height={1000}
               className="absolute top-20 w-11/12 h-fit object-contain"
             />
           </div>

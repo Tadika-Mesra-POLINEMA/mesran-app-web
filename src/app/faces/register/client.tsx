@@ -63,7 +63,7 @@ export default function RegisterFaceContent({
               setCaptureResult(false);
               setError("Wajah Anda tidak terdeteksi, silahkan coba lagi.");
             }
-          } catch (error) {
+          } catch {
             setCaptureResult(false);
             setError("Terjadi kesalahan dalam memverifikasi wajah.");
           }
@@ -111,7 +111,7 @@ export default function RegisterFaceContent({
 
       register();
     }
-  }, [capturedImage]);
+  }, [capturedImage, router, params]);
 
   return (
     <div className="flex flex-col justify-between w-full min-h-[100dvh] px-12 py-8  mx-auto lg:w-2/6 md:w-1/2">

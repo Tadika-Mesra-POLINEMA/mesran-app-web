@@ -17,8 +17,7 @@ export const storeFaces = async (schema: { faces: Blob[] }) => {
     });
 
     return response.status === 201;
-  } catch (error) {
-    console.log(error);
+  } catch {
     return false;
   }
 };
@@ -34,7 +33,7 @@ export const validateFace = async (data: { face: Blob }) => {
     });
 
     return response.data.status === "success";
-  } catch (error) {
+  } catch {
     return false;
   }
 };

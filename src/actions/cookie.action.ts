@@ -1,9 +1,6 @@
 "use server";
 
-import {
-  RequestCookie,
-  ResponseCookie,
-} from "next/dist/compiled/@edge-runtime/cookies";
+import { ResponseCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { cookies } from "next/headers";
 
 export async function setCookie(
