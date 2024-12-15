@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { SectionLabel } from "./section-label";
 
 function HowWeWork() {
   return (
-    <section id="work" className="md:px-[60px] md:py-[60px] bg-[#FFFFFF] px-5 py-5">
+    <section
+      id="how-we-work"
+      className="md:px-[60px] md:py-[60px] bg-[#FFFFFF] px-5 py-5 scroll-m-5"
+    >
       <div className="flex flex-col gap-[60px] items-center">
         {/* Judul */}
         <div className="flex flex-col gap-4 items-center">
-          <div className="px-4 py-2 bg-[#FFEDEA] rounded-full font-semibold text-base text-[#FE4F34]">
-            Bagaimana kami bekerja
-          </div>
+          <SectionLabel>Bagaimana kami bekerja</SectionLabel>
           <p className="text-[40px] text-center leading-[120%] font-medium text-[#1B1B1B]">
             Membuat acara dengan <br />
             sangat mudah.
@@ -23,9 +27,11 @@ function HowWeWork() {
           {/* Container 1 */}
           <div className="relative overflow-hidden flex flex-col w-full h-[600px] bg-[#F6F6F6] rounded-xl items-center">
             <div className="relative overflow-hidden w-full flex flex-grow">
-              <img
-                src="/images/mockup2.png" // Path to your logo image
+              <Image
+                src="/images/mockup2.png"
                 alt="Logo"
+                width={1000}
+                height={1000}
                 className="w-10/12 object-contain absolute top-[40px] left-1/2 -translate-x-1/2"
               />
             </div>
@@ -44,9 +50,11 @@ function HowWeWork() {
           {/* Container 2 */}
           <div className="relative overflow-hidden flex flex-col w-full h-[600px] bg-[#F6F6F6] rounded-xl items-center">
             <div className="relative overflow-hidden w-full flex flex-grow">
-              <img
-                src="/images/mockup3.png" // Path to your logo image
+              <Image
+                src="/images/mockup3.png"
                 alt="Logo"
+                width={1000}
+                height={1000}
                 className="w-10/12 object-contain absolute top-[40px] left-1/2 -translate-x-1/2"
               />
             </div>
@@ -64,9 +72,11 @@ function HowWeWork() {
           {/* Container 3 */}
           <div className="relative overflow-hidden flex flex-col w-full h-[600px] bg-[#F6F6F6] rounded-xl items-center">
             <div className="relative overflow-hidden w-full flex flex-grow">
-              <img
-                src="/images/mockup4.png" // Path to your logo image
+              <Image
+                src="/images/mockup4.png"
                 alt="Logo"
+                width={1000}
+                height={1000}
                 className="w-10/12 object-contain absolute top-[40px] left-1/2 -translate-x-1/2"
               />
             </div>

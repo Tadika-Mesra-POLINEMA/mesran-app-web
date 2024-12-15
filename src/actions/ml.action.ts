@@ -1,52 +1,57 @@
 "use server";
 
 import { z } from "zod";
-import { predict, storeFace, userById } from "@/lib/ml";
-import { FaceRegisterSchema } from "@/schema/face-registration";
-import { VerifyFaceSchema } from "@/schema/verify-page";
+import { storeFaces, validateFace } from "@/lib/ml";
+import {
+  FaceRegisterSchema,
+  FaceRegisterSingleImageSchema,
+} from "@/schema/face-registration";
 
 export const registerFace = async (
-  schema: z.infer<typeof FaceRegisterSchema>
+  payload: z.infer<typeof FaceRegisterSchema>
 ) => {
   try {
-    const validatedPayload = await FaceRegisterSchema.safeParseAsync(schema);
+    const validatedPayload = await FaceRegisterSchema.safeParseAsync(payload);
 
     if (!validatedPayload.success) {
       throw new Error(validatedPayload.error.errors[0].message);
     }
 
-    const blob = await fetch(schema.image).then((res) => res.blob());
+    const faces = await Promise.all(
+      validatedPayload.data.images.map(async (image) => {
+        return await fetch(image).then((res) => res.blob());
+      })
+    );
 
-    const response = await storeFace({ image: blob });
+    const response = await storeFaces({ faces });
 
     return response;
   } catch (error) {
     console.log(error);
-    // TODO: Handling Error
   }
 };
 
-export const predictFace = async (schema: z.infer<typeof VerifyFaceSchema>) => {
+export const verifyFace = async (
+  payload: z.infer<typeof FaceRegisterSingleImageSchema>
+) => {
   try {
-    const validatedPayload = await VerifyFaceSchema.safeParseAsync(schema);
+    const validatedPayload = await FaceRegisterSingleImageSchema.safeParseAsync(
+      payload
+    );
 
     if (!validatedPayload.success) {
       throw new Error(validatedPayload.error.errors[0].message);
     }
 
-    const blob = await fetch(schema.image).then((res) => res.blob());
+    const face = await fetch(payload.image).then((res) => res.blob());
 
-    const response = await predict({ image: blob });
-    return response.user_id;
-  } catch (error) {
-    console.log(error);
-  }
-};
+    const isFaceValidated = await validateFace({ face });
 
-export const getUserById = async (id: string) => {
-  try {
-    const response = await userById(id);
-    return response.data;
+    if (!isFaceValidated) {
+      throw new Error("Failed to verify face registered");
+    }
+
+    return isFaceValidated;
   } catch (error) {
     console.log(error);
   }
