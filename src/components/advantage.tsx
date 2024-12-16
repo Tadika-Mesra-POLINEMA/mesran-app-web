@@ -7,29 +7,26 @@ function Advantage() {
   return (
     <section
       id="advantages"
-      className="md:px-[60px] md:py-[60px] bg-[#FFFFFF] px-5 py-5 scroll-m-5"
+      className="md:px-[60px] md:py-[60px] bg-[#FFFFFF] px-5 py-8 scroll-m-5"
     >
-      <div className="flex flex-col gap-[60px] items-center">
+      <div className="flex flex-col md:gap-[60px] gap-8 items-center">
         {/* Judul */}
         <div className="flex flex-col gap-4 items-center">
           <SectionLabel>Keunggulan</SectionLabel>
-          <p className="text-[40px] text-center leading-[120%] font-medium text-[#1B1B1B]">
-            Apa yang membuat kami <br />
-            berbeda dengan yang lain?
+          <p className="md:text-[40px] text-[28px] text-center leading-[120%] font-medium text-[#1B1B1B] md:w-[480px] w-full">
+            Apa yang membuat kami berbeda dengan yang lain?
           </p>
-          <p className="text-base text-center text-[#7F7F7F]">
-            Kami menawarkan fitur eksklusif, mudah digunakan, dan teknologi{" "}
-            <br />
-            canggih untuk membuat acara Anda lebih spesial.
+          <p className="text-base text-center text-[#7F7F7F] md:w-[500px] w-full">
+            Kami menawarkan fitur eksklusif, mudah digunakan, dan teknologi canggih untuk membuat acara Anda lebih spesial.
           </p>
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-6 gap-3 w-full">
           {/* Container 1 */}
-          <div className="flex flex-col gap-6 w-full">
+          <div className="flex flex-col md:gap-6 gap-3 w-full">
             {/* Pertama */}
-            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#E8FFD3] rounded-xl px-6 py-6">
+            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#E8FFD3] rounded-xl md:p-6 p-3">
               <Image
                 src="/images/petir.png"
                 alt="Lightning Icon"
@@ -38,7 +35,7 @@ function Advantage() {
                 className="object-contain"
               />
               <div className="flex flex-col gap-3">
-                <p className="font-medium text-[28px] text-[#1B1B1B]">
+                <p className="font-medium md:text-[28px] text-xl text-[#1B1B1B]">
                   Real-Time Notifikasi
                 </p>
                 <p className="text-base text-[#7F7F7F]">
@@ -48,7 +45,7 @@ function Advantage() {
               </div>
             </div>
             {/* Kedua */}
-            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#FDE0F5] rounded-xl px-6 py-6">
+            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#FDE0F5] rounded-xl md:p-6 p-3">
               <Image
                 src="/images/flex.png"
                 alt="Lightning Icon"
@@ -57,7 +54,7 @@ function Advantage() {
                 className="object-contain"
               />
               <div className="flex flex-col gap-3">
-                <p className="font-medium text-[28px] text-[#1B1B1B]">
+                <p className="font-medium md:text-[28px] text-xl text-[#1B1B1B]">
                   Flexible Semua Acara
                 </p>
                 <p className="text-base text-[#7F7F7F]">
@@ -80,9 +77,9 @@ function Advantage() {
           </div>
 
           {/* Container 3 */}
-          <div className="flex flex-col gap-6 w-full">
+          <div className="flex flex-col md:gap-6 gap-3 w-full">
             {/* Pertama */}
-            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#E8E5FF] rounded-xl px-6 py-6">
+            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#E8E5FF] rounded-xl md:p-6 p-3">
               <div className="flex justify-between items-center w-full">
                 <Image
                   src="/images/pesan.png"
@@ -91,12 +88,12 @@ function Advantage() {
                   height={60}
                   className="object-contain"
                 />
-                <div className="px-[10px] py-[6px] bg-[#1B1B1B] rounded-full font-semibold text-base text-[#FFFFFF]">
+                <div className="px-[10px] py-[6px] bg-[#1B1B1B] rounded-full font-semibold md:text-base text-xs text-[#FFFFFF]">
                   SOON!
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                <p className="font-medium text-[28px] text-[#1B1B1B]">
+                <p className="font-medium md:text-[28px] text-xl text-[#1B1B1B]">
                   Kirim Pesan ke Teman
                 </p>
                 <p className="text-base text-[#7F7F7F]">
@@ -106,7 +103,7 @@ function Advantage() {
               </div>
             </div>
             {/* Kedua */}
-            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#DFF2FF] rounded-xl px-6 py-6">
+            <div className="flex flex-col justify-between w-full h-full gap-[68px] bg-[#DFF2FF] rounded-xl md:p-6 p-3">
               <Image
                 src="/images/kunci.png"
                 alt="Lightning Icon"
@@ -115,7 +112,7 @@ function Advantage() {
                 className="object-contain"
               />
               <div className="flex flex-col gap-3">
-                <p className="font-medium text-[28px] text-[#1B1B1B]">
+                <p className="font-medium md:text-[28px] text-xl text-[#1B1B1B]">
                   Kirim Undangan ke Semua
                 </p>
                 <p className="text-base text-[#7F7F7F]">

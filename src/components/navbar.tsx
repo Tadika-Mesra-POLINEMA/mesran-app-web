@@ -13,15 +13,31 @@ function Navbar() {
   return (
     <div className="navbar px-5 bg-base-100 fixed top-0 left-0 z-[9999] shadow-sm">
       <div className="navbar-start">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt="Mesran Logo"
-            width={40}
-            height={40}
-            className="object-contain"
-          />
-          <a className="text-xl font-bold text-primary-base">Mesran</a>
+        <div className="flex items-center gap-[6px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="41"
+            fill="none"
+            viewBox="0 0 40 41"
+          >
+            <g clip-path="url(#a)">
+              <path
+                stroke="#FE4F34"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M6.667 8.833H10M8.333 7.167V10.5m10.834-3.333-.834 3.333M30 8.833h3.333m-1.666-1.666V10.5M25 15.5l-1.667 1.667m6.667 5 3.333-.834M30 32.167h3.333M31.667 30.5v3.333m-8.331-5.803L12.473 17.167 5.156 33.133a1.667 1.667 0 0 0 2.215 2.215l15.965-7.318Z"
+              />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 .5h40v40H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+
+          <a className="text-2xl font-medium text-primary-base">Mesran</a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
