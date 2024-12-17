@@ -40,8 +40,6 @@ export default function InvitationClientPage({
         if (result.isConfirmed) {
           const isFaceRegistered = await faceRegistered();
 
-          console.log(isFaceRegistered);
-
           if (isFaceRegistered.status == "success") {
             const response = await joinEvent(id);
             if (response.status === "success") {
@@ -57,7 +55,7 @@ export default function InvitationClientPage({
             }
             if (response.status === "error") {
               Swal.fire({
-                title: "Gagal mendaftar",
+                title: "Gagal bergabung",
                 text: response.message,
                 icon: "error",
                 confirmButtonColor: "#FE4F34",
@@ -68,7 +66,7 @@ export default function InvitationClientPage({
             }
           } else {
             Swal.fire({
-              title: "Gagal mendaftar",
+              title: "Gagal bergabung",
               text: "Kamu belum mendaftarkan wajah pada sistem, silahkan daftarkan wajah terlebih dahulu",
               icon: "error",
               confirmButtonColor: "#FE4F34",
@@ -88,7 +86,7 @@ export default function InvitationClientPage({
   };
 
   return (
-    <div className="flex flex-col justify-between w-full min-h-[100dvh] p-12 mx-auto lg:w-2/6 md:w-1/2">
+    <div className="flex flex-col justify-between w-full min-h-[100dvh] p-4 mx-auto lg:w-2/6 md:w-1/2">
       <section className="flex flex-col gap-5">
         <h2 className="text-2xl font-semibold text-center text-neutral-90">
           Undangan

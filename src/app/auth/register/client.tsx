@@ -10,8 +10,8 @@ import { InputContainer } from "@/components/input-container";
 import { InputLabel } from "@/components/input-label";
 import { InputField } from "@/components/input-field";
 import { ChevronLeft } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { registerUser } from "@/actions/user.action";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
+import { faceRegistered, registerUser } from "@/actions/user.action";
 import { useState } from "react";
 
 export default function RegisterPageContent() {
@@ -38,12 +38,18 @@ export default function RegisterPageContent() {
       if (response?.status === "error") {
         setError(response.message);
       } else {
-        const redirect = searchParams.get("callbackUrl");
+        const isFaceRegistered = await faceRegistered();
 
-        if (redirect) {
-          router.push(redirect);
+        if (isFaceRegistered.status === "success") {
+          const redirect = searchParams.get("callbackUrl");
+
+          if (redirect) {
+            router.push(redirect);
+          } else {
+            router.push("/");
+          }
         } else {
-          router.push("/");
+          router.replace(`/faces/register?callbackUrl=${redirect}`);
         }
       }
     } catch (error) {

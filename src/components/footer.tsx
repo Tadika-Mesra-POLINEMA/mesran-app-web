@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -29,12 +28,12 @@ const Footer: React.FC = () => {
                 fill="none"
                 viewBox="0 0 40 41"
               >
-                <g clip-path="url(#a)">
+                <g clipPath="url(#a)">
                   <path
                     stroke="#FE4F34"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2.5"
                     d="M6.667 8.833H10M8.333 7.167V10.5m10.834-3.333-.834 3.333M30 8.833h3.333m-1.666-1.666V10.5M25 15.5l-1.667 1.667m6.667 5 3.333-.834M30 32.167h3.333M31.667 30.5v3.333m-8.331-5.803L12.473 17.167 5.156 33.133a1.667 1.667 0 0 0 2.215 2.215l15.965-7.318Z"
                   />
                 </g>
@@ -55,7 +54,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
             {/* Company */}
             <div className="flex flex-col md:gap-6 gap-4">
-              <p className="font-medium md:text-xl text-lg text-neutral-90">Company</p>
+              <p className="font-medium md:text-xl text-lg text-neutral-90">
+                Company
+              </p>
               <div className="flex flex-col gap-4 text-base text-neutral-40">
                 <a
                   onClick={() => handleClickNavigation("advantages")}
@@ -79,7 +80,9 @@ const Footer: React.FC = () => {
             </div>
             {/* Kontributor */}
             <div className="flex flex-col md:gap-6 gap-4">
-              <p className="font-medium md:text-xl text-lg text-neutral-90">Kontributor</p>
+              <p className="font-medium md:text-xl text-lg text-neutral-90">
+                Kontributor
+              </p>
               <div className="flex flex-col gap-4 text-base text-neutral-40">
                 <a
                   href="https://www.linkedin.com/in/ajihamdaniahmad/"
