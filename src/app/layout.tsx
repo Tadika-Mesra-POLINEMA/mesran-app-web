@@ -21,8 +21,13 @@ const fontMedium = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mesran App Website",
+  title: "Evenify - Event Management Service",
   description: "We provide the best service for you for handling an event",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

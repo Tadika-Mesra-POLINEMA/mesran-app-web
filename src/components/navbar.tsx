@@ -68,9 +68,18 @@ function Navbar() {
       </div>
       <div className="navbar-end">
         {/* Tombol download hanya terlihat di desktop */}
-        <button className="hidden lg:block font-semibold text-base text-neutral-0 px-5 py-3 bg-primary-base rounded-full">
-          Download App
-        </button>
+        <div
+          className="tooltip tooltip-left"
+          data-tip="We're so sorry, but the app is not available for now."
+        >
+          <button
+            className="hidden lg:block font-semibold text-base text-neutral-0 px-5 py-3 bg-primary-base/50 rounded-full cursor-pointer"
+            disabled
+            tabIndex={0}
+          >
+            Download App
+          </button>
+        </div>
 
         {/* Dropdown untuk mobile */}
         <div className="dropdown dropdown-end">
@@ -108,9 +117,17 @@ function Navbar() {
               <a onClick={() => handleClickNavigation("faq")}>FAQ</a>
             </li>
             <li className="mt-4 flex justify-center">
-              <button className="flex justify-center text-neutral-0 px-5 py-3 bg-primary-base font-semibold rounded-full">
-                <span className="mx-auto">Download App</span>
-              </button>
+              <div
+                className="tooltip tooltip-bottom"
+                data-tip="We're so sorry, but the app is not available for now."
+              >
+                <button
+                  className="flex justify-center w-full text-neutral-0 px-5 py-3 bg-primary-base/50 font-semibold rounded-full"
+                  disabled
+                >
+                  <span className="mx-auto">Download App</span>
+                </button>
+              </div>
             </li>
           </ul>
         </div>
