@@ -5,13 +5,13 @@ import { api } from "./api";
 
 export const invitationDetail = async (
   eventId: string
-): Promise<Invitation> => {
+): Promise<Invitation | null> => {
   try {
-    const response = await api.get(`/api/events/${eventId}/invitation`);
+    const response = await api.get(`/api/events/${eventId}`);
 
-    return response.data.data;
-  } catch (error) {
-    throw error;
+    return response.data?.data?.event || response.data?.data;
+  } catch {
+    return null;
   }
 };
 

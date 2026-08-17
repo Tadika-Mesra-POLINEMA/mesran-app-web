@@ -1,4 +1,5 @@
 import { invitationDetail } from "@/lib/events";
+import { notFound } from "next/navigation";
 import InvitationClientPage from "./client";
 
 export default async function InvitationPage({
@@ -10,7 +11,7 @@ export default async function InvitationPage({
   const invitation = await invitationDetail(id);
 
   if (!invitation) {
-    return <div>Undangan tidak ditemukan</div>;
+    notFound();
   }
 
   return <InvitationClientPage id={id} invitation={invitation} />;
