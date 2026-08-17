@@ -28,7 +28,7 @@ export const validateFace = async (data: { face: Blob }) => {
 
     formData.append("face", data.face, "face_image.jpg");
 
-    const response = await ml.post("/face/validate", formData, {
+    const response = await ml.post("/faces/validate", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 

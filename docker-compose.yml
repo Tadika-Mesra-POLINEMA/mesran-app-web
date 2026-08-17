@@ -1,10 +1,26 @@
 services:
-  nextjs:
-    container_name: mesran_app_web
+  web:
+    container_name: mesran_app_web_dev
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "3001:3001"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
+      - PORT=3001
+      - HOSTNAME=0.0.0.0
+      - WATCHPACK_POLLING=true
+      - NEXT_BASE_API_URL=${NEXT_BASE_API_URL:-http://host.docker.internal:3000}
+      - BASE_API_URL=${BASE_API_URL:-http://host.docker.internal:5000}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - path: .env.local
+        required: false
+      - path: .env
+        required: false
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next

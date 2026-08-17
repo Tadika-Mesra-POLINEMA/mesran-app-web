@@ -1,4 +1,4 @@
-FROM node:18-alpine AS build
+FROM node:20-alpine AS build
 
 WORKDIR /usr/src/app
 
@@ -10,9 +10,7 @@ COPY . .
 
 RUN npm run build
 
-RUN ls -la /usr/src/app/.next
-
-FROM node:18-alpine AS production
+FROM node:20-alpine AS production
 
 WORKDIR /usr/src/app
 
@@ -23,6 +21,7 @@ COPY --from=build /usr/src/app/.next ./.next
 COPY --from=build /usr/src/app/public ./public
 
 ENV PORT=3001
+ENV HOSTNAME="0.0.0.0"
 
 EXPOSE 3001
 
